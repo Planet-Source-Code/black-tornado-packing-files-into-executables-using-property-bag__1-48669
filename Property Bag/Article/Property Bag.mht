@@ -1,0 +1,764 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Property Bag
+Date: Sun, 21 Sep 2003 16:02:36 +0400
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0000_01C38059.C65575C0";
+	type="text/html"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C38059.C65575C0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://D:\My%20VB%20Projects\Property%20Bag\Article\Property%20Bag.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML dir=3Dltr><HEAD><TITLE>Property Bag</TITLE>
+<META http-equiv=3DContent-Language content=3Den-us>
+<META content=3D"MSHTML 6.00.2600.0" name=3DGENERATOR>
+<META content=3DFrontPage.Editor.Document name=3DProgId>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252"></HEAD>
+<BODY dir=3Dltr=20
+style=3D"FONT-SIZE: 10pt; MARGIN: 0px; WORD-SPACING: 0px; WIDTH: 800px; =
+TEXT-INDENT: 5px; FONT-FAMILY: Tahoma; LIST-STYLE-TYPE: square; =
+TEXT-ALIGN: left"=20
+text=3D#000000 vLink=3D#0066cc link=3D#0099ff bgProperties=3Dfixed =
+bgColor=3D#ffffff=20
+background=3Dfile:///C:/Documents%20and%20Settings/Black%20Tornado/My%20D=
+ocuments/My%20Webs/images/Background.jpg>
+<P style=3D"TEXT-INDENT: 2px; TEXT-ALIGN: center">&nbsp;</P>
+<P style=3D"TEXT-INDENT: 2px; TEXT-ALIGN: center"><B><FONT =
+size=3D5>Packing Files=20
+into Executables using Property Bag</FONT></B></P>
+<HR>
+
+<P style=3D"TEXT-INDENT: 2px"><FONT face=3DArial size=3D3>Article by <A=20
+title=3D"Click here to e-mail author"=20
+href=3D"mailto:btsoft@burntmail.com?subject=3DAbout PropertyBag">Black=20
+Tornado</A></P>
+<P style=3D"TEXT-INDENT: 2px"><B>What is property page?</B></P>
+<P style=3D"TEXT-INDENT: 2px">Property bag is like its name, it is a bag =
+for=20
+carrying everything you want, for example it can carry strings, =
+pictures, files,=20
+etc ... everything else...</P>
+<P style=3D"TEXT-INDENT: 2px">To use property bag you will need to dim a =
+variable=20
+as new property bag:</P></FONT><FONT color=3D#000080>
+<P style=3D"TEXT-INDENT: 2px"><FONT face=3D"Courier New"=20
+size=3D3>Dim</FONT></FONT><FONT face=3D"Courier New" size=3D3> MyBag as =
+New=20
+</FONT><FONT color=3D#000080><FONT face=3D"Courier New"=20
+size=3D3>PropertyBag</FONT></P></FONT>
+<P style=3D"TEXT-INDENT: 2px"><FONT face=3DArial size=3D3>Ok, property =
+bag only have=20
+one property and it is 'Contents' which is very useful if you want to =
+transfer=20
+the whole contents from another property bag or from a file. We can say =
+that=20
+property bag is like a resource file but it is much better than the =
+resource=20
+file because you can write/read properties at run time.</P>
+<P style=3D"TEXT-INDENT: 2px">Property bag has two functions, I will =
+describe each=20
+one of them:</P>
+<P style=3D"TEXT-INDENT: 2px">- <B>ReadProperty</B>: This function is =
+used to read=20
+a property from the property bag. It will return the same data, for =
+example if=20
+we wrote a property for Picture and make its value a picture box =
+picture, the=20
+ReadProperty will return picture.</P>
+<P style=3D"TEXT-INDENT: 2px">ReadProperty(Name as String, =
+[DefaultValue])</P>
+<P style=3D"TEXT-INDENT: 2px">Description: Reads data from a =
+property</P>
+<P style=3D"TEXT-INDENT: 2px">Inputs:</P>
+<UL>
+  <LI>
+  <P style=3D"TEXT-INDENT: 2px">Name : Name of property to read </P>
+  <LI>
+  <P style=3D"TEXT-INDENT: 2px">Default Value : Value for the property =
+if the real=20
+  value doesn't contain data </P></LI></UL>
+<P style=3D"TEXT-INDENT: 2px">Output: Typed property value (data)</P>
+<P style=3D"TEXT-INDENT: 2px">- <B>WriteProperty</B>: This function is =
+used to=20
+write a property to the property bag. It will write the same data, for =
+example=20
+if value is a picture then the written value is picture.</P>
+<P style=3D"TEXT-INDENT: 2px">WriteProperty(Name as String, Value,=20
+[DefaultValue])</P>
+<P style=3D"TEXT-INDENT: 2px">Description: Writes a property to the =
+property=20
+bag</P>
+<P style=3D"TEXT-INDENT: 2px">Inputs:</P>
+<UL>
+  <LI>
+  <P style=3D"TEXT-INDENT: 2px">Name: Name of property to write/edit =
+</P>
+  <LI>
+  <P style=3D"TEXT-INDENT: 2px">Value: Value of the property (data) </P>
+  <LI>
+  <P style=3D"TEXT-INDENT: 2px">DefaultValue: Value returned in case =
+that 'Value'=20
+  is empty </P></LI></UL>
+<P style=3D"TEXT-INDENT: 2px">Returns: Nothing</P>
+<P style=3D"TEXT-INDENT: 2px">Now, I will write a sample project that =
+will make=20
+you see PropertyBag very powerful.</P>
+<P style=3D"TEXT-INDENT: 2px">The project I am attempting to write is =
+for checking=20
+password, the password will be stored in a property bag and then it will =
+be=20
+mixed with a reading file. Then the reading file will read the EXTRA =
+DATA (which=20
+is property bag). I made the password protection very weak, because this =
+is an=20
+example. This sample will make you able to make a self-extracting =
+applications=20
+or applications for storing files, like Pictures2EXE.</P>
+<P style=3D"TEXT-INDENT: 2px">First of all, make a new 'Standard EXE' =
+project and=20
+name it 'Writer'</P>
+<P style=3D"TEXT-INDENT: 2px">Now write the following code in your=20
+form:</FONT></P><FONT size=3D2>
+<HR>
+
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New"><FONT color=3D#000080>Private Sub</FONT>=20
+From_Load()</P></FONT></FONT><FONT face=3D"Courier New"><FONT =
+color=3D#008000=20
+size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+Begin of code=20
+<B>Writer.exe</P></B>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' The =
+code=20
+below, will attempt to mix <B>Reader.exe</B> (PropertyBag reader) with A =
+
+property bag contents.</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' In =
+this=20
+example you will see the words <B>EXTRA DATA</B>, these 2 word means =
+<B>Property=20
+Bag Contents</P></B>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+which is=20
+really an <B>EXTRA DATA</B>.</P></FONT><FONT color=3D#000080 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">On =
+Error Resume=20
+Next </FONT></FONT><FONT color=3D#008000 size=3D2><FONT face=3D"Courier =
+New">' Resume=20
+code even if error happened, I have typed Resume because we will=20
+delete</FONT></P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"></FONT><FONT=20
+face=3D"Courier New" color=3D#008000 size=3D2>' the file =
+(<B>Test.exe</B>) if exists.=20
+But if it is not exists an error will happen</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' So =
+we will=20
+say 'On Error GoTo HaveError' when we reach the level of code after</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+<B>Kill</B>=20
+statement, because now every error will happen after the <B>Kill</B>=20
+statement</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' Its =
+reason is=20
+error in opening file (<B>Reader.exe</B>) or in writing test file=20
+(<B>Test.exe</B>)</P></FONT><FONT face=3D"Courier New" color=3D#000080 =
+size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Dim</FONT><FONT=20
+face=3D"Courier New" color=3D#008000 size=3D2> </FONT><FONT =
+face=3D"Courier New"=20
+size=3D2>EXE_File </FONT><FONT face=3D"Courier New" color=3D#000080 =
+size=3D2>As=20
+String</FONT><FONT face=3D"Courier New" color=3D#008000 size=3D2> ' The =
+compiled file=20
+path</P></FONT><FONT face=3D"Courier New"><FONT color=3D#000080 =
+size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Dim</FONT><FONT=20
+size=3D2> Writing_Position </FONT><FONT color=3D#000080 =
+size=3D2>As</FONT><FONT=20
+size=3D2> </FONT><FONT color=3D#000080 size=3D2>Long </FONT><FONT =
+color=3D#008000=20
+size=3D2>' This variable stores the position of writing <B>EXTRA=20
+CODE</B>!</P></FONT><FONT color=3D#000080 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Dim</FONT><FONT=20
+size=3D2> MyBag </FONT><FONT color=3D#000080 size=3D2>As</FONT><FONT =
+size=3D2>=20
+</FONT><FONT color=3D#000080 size=3D2>New</FONT><FONT size=3D2> =
+PropertyBag=20
+</FONT><FONT color=3D#008000 size=3D2>' Make a new property bag to put =
+in the=20
+<B>EXE</B></P></FONT><FONT color=3D#000080 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Dim</FONT><FONT=20
+size=3D2> Temp </FONT><FONT color=3D#000080 size=3D2>As</FONT><FONT =
+size=3D2>=20
+</FONT><FONT color=3D#000080 size=3D2>Variant</FONT><FONT size=3D2>=20
+</FONT></FONT><FONT color=3D#008000 size=3D2><FONT face=3D"Courier =
+New">' This value=20
+will store the contents of MyBag, It is a variant because there=20
+is</FONT></P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"></FONT><FONT=20
+face=3D"Courier New" color=3D#008000 size=3D2>' no specific type of =
+Property Bag=20
+contents, it may by picture, string, integer...</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' Now =
+we will=20
+write some property items to the property bag, because we will retrieve =
+the=20
+contents in the other</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+program=20
+(Reader). And if the property doesn't contains data we will be not able =
+to know=20
+if the program (Reader)</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' has =
+really=20
+read the data.</P></FONT><FONT face=3D"Courier New"><FONT size=3D2>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">MyBag.WriteProperty=20
+"Message", InputBox("Enter a good message") <FONT color=3D#008000>' A =
+Message=20
+displayed if the password is OK!</FONT></P>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">MyBag.WriteProperty=20
+"Password", InputBox("Enter the protection password")<FONT=20
+color=3D#008000>&nbsp;&nbsp; ' A test password</FONT></P></FONT><FONT=20
+color=3D#008000 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' If =
+you want=20
+to add your own property just type:</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">'=20
+MyBag.WriteProperty "Your Property", "Property Value"</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+Now, we will=20
+make a copy of Reader.exe to a new file named Test.exe</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' =
+this copy=20
+will read the EXTRA DATA. But there is no <B>EXTRA DATA</B> in it so</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' we =
+will open=20
+the file as binary and then add our bag contents</P></FONT><FONT =
+size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">EXE_File =3D=20
+InputBox("Enter the compiled Executable path:", "Compiled File Patch",=20
+"C:\Test.exe")<BR></FONT></FONT><FONT size=3D2><FONT face=3D"Courier =
+New">Kill=20
+EXE_File <FONT color=3D#008000>' Kill the compiled file if it is already =
+
+exists</FONT></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">FileCopy=20
+App.Path &amp; "\Reader.exe", EXE_File <FONT color=3D#008000>' Make a =
+copy of=20
+Reader.exe (Template) to <B>EXE_File</B></FONT></P></FONT>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New" color=3D#008000>' Now, we are going to write the =
+REAL=20
+CODE!!!</FONT></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New" color=3D#000080>On Error GoTo </FONT><FONT=20
+face=3D"Courier New">HaveError</FONT><FONT face=3D"Courier New" =
+color=3D#008000> ' If=20
+there is an error, then its a writing error</FONT></P></FONT><FONT=20
+face=3D"Courier New"><FONT color=3D#000080 size=3D2>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Open</FONT><FONT=20
+size=3D2> EXE_File </FONT><FONT color=3D#000080 size=3D2>For Binary As=20
+</FONT></FONT><FONT size=3D2><FONT face=3D"Courier New">#1 <FONT =
+color=3D#008000>'=20
+Open template file for applying patch in binary </FONT></FONT><FONT=20
+face=3D"Courier New" color=3D#008000>mode</FONT></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New">Writing_Position =3D LOF(1) </FONT></FONT><FONT =
+color=3D#008000=20
+size=3D2><FONT face=3D"Courier New">' Writing_Position=3DLength Of File =
+(1) which is=20
+the file we opened with Open</FONT></P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"></FONT><FONT=20
+face=3D"Courier New" color=3D#008000 size=3D2>' statement =
+(<B>EXE_File</B>), So=20
+Writing_Position =3D Size Of Target File (<B>EXE_File</B>) =3D End of =
+original=20
+file</P></FONT><FONT face=3D"Courier New"><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Temp =
+=3D=20
+MyBag.Contents </FONT><FONT color=3D#008000 size=3D2>' Copy the contents =
+of property=20
+bag into <B>Temp</B> variable</P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+color=3D#000080>Seek</FONT> #1, LOF(1) </FONT><FONT color=3D#008000 =
+size=3D2>' Set=20
+position of file writing to the end of original file (File without =
+<B>EXTRA=20
+DATA</B>)</P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+color=3D#000080>Put</FONT> #1, , Temp </FONT><FONT color=3D#008000 =
+size=3D2>' Put the=20
+contents of property bag to Test.exe file</P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+color=3D#000080>Put</FONT> #1, , Writing_Position </FONT></FONT><FONT=20
+color=3D#008000 size=3D2><FONT face=3D"Courier New">' At last, we must =
+put the=20
+original file size (length)</FONT></P></FONT><FONT size=3D2>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"></P></FONT><FONT=20
+color=3D#000080 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New">Close</FONT></FONT><FONT face=3D"Courier New" =
+size=3D2> #1 <FONT=20
+color=3D#008000>' Close the file</FONT></FONT></P><FONT face=3D"Courier =
+New"><FONT=20
+color=3D#008000 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' If =
+operation=20
+is done without any errors, that means that the file has been written=20
+successfully</P></FONT><FONT size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">MsgBox "Testing=20
+file has been wrote successfully, press 'OK' to launch the=20
+file",vbInformation,"Congratulations!"</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Shell =
+EXE_File,=20
+vbNormalFocus <FONT color=3D#008000>' Run the patched =
+file</FONT></P></FONT><FONT=20
+color=3D#000080 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">End=20
+</FONT><FONT color=3D#008000 size=3D2>' End the program</P></FONT><FONT =
+size=3D2>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">HaveError:</FONT><FONT=20
+color=3D#000080 size=3D2> </FONT></FONT><FONT color=3D#008000 =
+size=3D2><FONT=20
+face=3D"Courier New">' Sorry, we have an error</FONT></P></FONT><FONT=20
+color=3D#000080 size=3D2>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"></P></FONT><FONT=20
+size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New">MsgBox "Error during file compilation", vbCritical, =
+"Error=20
+compiling file"</P></FONT></FONT><FONT face=3D"Courier New" =
+color=3D#008000 size=3D2>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">' End =
+of code=20
+Writer.exe</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3D"Courier New"><FONT color=3D#000080 size=3D2>End </FONT><FONT =
+color=3D#008000=20
+size=3D2>' End the program</FONT></FONT></P></FONT><FONT color=3D#000080 =
+
+size=3D2><FONT face=3D"Courier New">
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">End=20
+Sub</FONT></P>
+<HR>
+</FONT>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+face=3DArial size=3D3>Now, After you saw how the file is written. It is =
+very=20
+important to compile the project to an executable file.</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Compile=20
+the project in the same directory of your project and name it=20
+<B>Writer.exe</B></FONT></P><FONT size=3D2>
+<HR>
+
+<P dir=3Dltr style=3D"TEXT-INDENT: 2px">Create a new <B>Standard EXE</B> =
+project,=20
+name it 'Reader' and add the following code to its form</P>
+<HR dir=3Dltr>
+
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+face=3D"Courier New">Private Sub From_Load()</P></FONT></FONT><FONT=20
+face=3D"Courier New" size=3D2>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#008000>' Begin of code <B>Reader.exe</P></B>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">' The=20
+code below, will attempt to read the <B>EXTRA DATA</B> attached with the =
+copy of=20
+Reader.exe</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">' which=20
+is the patched version using Writer.exe. If you run this program without =
+
+patching an</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">' error=20
+message will be displayed saying 'Bad Record Number' because there is =
+not=20
+attached</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">'=20
+<B>EXTRA DATA</B> with the file, so the program can't read the <B>EXTRA=20
+DATA</B></P></FONT>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>Dim</FONT> Extracted_Bag <FONT color=3D#000080>As =
+New</FONT>=20
+PropertyBag <FONT color=3D#008000>' Name of the extracted property=20
+bag</FONT><BR><FONT color=3D#000080>Dim</FONT> Reading_Position <FONT=20
+color=3D#000080>As Long</FONT> <FONT color=3D#008000>' Start point of =
+file=20
+reading</FONT><BR><FONT color=3D#000080>Dim</FONT> Temp <FONT=20
+color=3D#000080>As</FONT> Variant <FONT color=3D#008000>' Variable to =
+store the=20
+property bag contents from the Extracted_Bag</FONT><BR><FONT=20
+color=3D#000080>Dim</FONT> RealContents() <FONT color=3D#000080>As=20
+Byte</FONT><BR>&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+face=3D"Courier New" color=3D#000080 size=3D2>On Error GoTo =
+</FONT>ReadError<FONT=20
+face=3D"Courier New" color=3D#000080 size=3D2> </FONT><FONT =
+face=3D"Courier New"=20
+color=3D#008000 size=3D2>' </FONT><FONT color=3D#008000>If there is an =
+error in=20
+reading data, tell the user that!</FONT></P>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><BR><FONT=20
+color=3D#000080>Open</FONT> App.Path &amp; "\" &amp; App.EXEName &amp; =
+".exe"=20
+<FONT color=3D#000080>For Binary As</FONT> #1 <FONT color=3D#008000>' =
+Open the=20
+patched file (the file itself)</FONT><BR><FONT =
+color=3D#000080>Get</FONT> #1,=20
+LOF(1) - 3, Reading_Position <FONT color=3D#008000>' Gets that start =
+position of=20
+data and put it in Reading_Position</FONT><BR>&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>Seek</FONT> #1, Reading_Position <FONT color=3D#008000>' =
+Set the=20
+file read position which is length of file - <B>3 =
+characters</B></FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>Get</FONT> #1, ,=20
+Temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+<FONT=20
+color=3D#008000>' Temp =3D PropertyBag.Contents</FONT><BR>RealContents =
+=3D=20
+Temp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT color=3D#008000>' =
+RealData =3D Temp=20
+converted into Bytes</FONT></P>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><BR>Extracted_Bag.Contents=20
+=3D RealContents <FONT color=3D#008000>' Put the contents to the =
+bag</FONT><BR><FONT=20
+color=3D#000080>Close</FONT>=20
+#1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+<FONT color=3D#008000>' After we finished reading, we must close the=20
+file.</FONT><BR>&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>Dim</FONT> Password <FONT color=3D#000080>As=20
+String</FONT>&nbsp;&nbsp;&nbsp; <FONT color=3D#008000>' Password=20
+variable</FONT></P>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Password=3DInputBox("Enter=20
+the password for the file") <FONT color=3D#008000>' Ask user for=20
+password</FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>If</FONT> Password &lt;&gt; =
+Extracted_Bag.ReadProperty("Password")=20
+<FONT color=3D#000080>Then</FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">MsgBox=20
+"The password you entered is invalid!", vbCritical, "Invalid =
+Password"</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>End</FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>End If</FONT></P>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#008000>' If Not Password &lt;&gt; =
+Extracted_Bag.ReadProperty("Password")=20
+that means that the passwords match</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">'=20
+Display the good message</FONT></P>
+<P dir=3Dltr=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><BR>MsgBox=20
+Extracted_Bag.ReadProperty("Message")</P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>End</FONT> <FONT color=3D#008000>' End of =
+Application</FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#008000><BR></FONT>ReadError:<FONT color=3D#008000> ' There is =
+an error in=20
+reading data from=20
+file<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+</FONT>MsgBox "Error during data read, data may be empty or it is =
+invalid",=20
+vbCritical<FONT color=3D#008000><BR></FONT><FONT =
+color=3D#000080>End</FONT></P>
+<P dir=3Dltr style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px"><FONT=20
+color=3D#000080>End Sub</FONT></P></FONT>
+<HR>
+
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+face=3DArial><FONT size=3D3>Compile the project in the same directory of =
+your=20
+project and name it <B>Reader.exe</B></FONT></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px"><FONT =
+
+size=3D3>After you finished, close visual basic and run the compiled =
+writing=20
+program <B>Writer.exe</B> and enter a password you wish to protect the =
+other=20
+file, press ENTER, the file you specified has been created. Now run it, =
+it will=20
+ask you for a password, enter the password you set. If it is not equal =
+then it=20
+won't display a message for you, if you type the same, a message will be =
+
+displayed.</FONT></FONT></P>
+<HR>
+
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">F.A.Q =
+
+(<B>Frequently Asked Questions</B>)</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Q.<B> =
+Can I put=20
+large files in a property bag ?</B></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">A. =
+Property Bag=20
+is a very big bag, but don't use it to make a very big package like (25) =
+
+Megs</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Q. =
+<B>What is=20
+the main target of property bag ?</B></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">A. =
+The main=20
+target for property bag is to serve you, because you can write/edit/read =
+
+attributes while runtime which is much better than the Resource Files =
+(*.res)=20
+because you cannot edit the resource files at runtime.</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Q. =
+<B>Do I need=20
+API calls to read from property bag ?</B></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">A. =
+No, this bag=20
+is very powerful as I said, you don't need any <B>DLL</B> or any =
+<B>API</B>=20
+function to retrieve and write data to property bag</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">Q. =
+<B>What type=20
+of applications I can create with the sample code ?</B></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">A. =
+You can=20
+create a nice applications like Pictures2EXE which is a program used to =
+pack=20
+pictures in one Executable file, it is not FREE and needs registration =
+but now=20
+you can make your own Pictures2EXE program, buy it or share it do what =
+ever you=20
+want.</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<HR>
+
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">The =
+project=20
+files are attached to the <B>ZIP</B> file, Enjoy!</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Please feel=20
+FREE to send me your comments or suggestions by e-mail to : <A=20
+href=3D"mailto:btsoft@burntmail.com?subject=3DComments">mailto:btsoft@bur=
+ntmail.com?subject=3DComments</A></P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">Yours,</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;=20
+Black Tornado</P>
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px">My =
+logo:=20
+<B>Nothing is impossible</B></P>
+<HR>
+
+<P style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: =
+2px">&nbsp;</P>
+<P=20
+style=3D"MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 2px; =
+TEXT-ALIGN: center"><FONT=20
+color=3D#0066cc><B>If you found this article useful, you may want to =
+vote for me,=20
+Thank you very much!</B></FONT></P></BODY></HTML>
+
+------=_NextPart_000_0000_01C38059.C65575C0
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Documents%20and%20Settings/Black%20Tornado/My%20Documents/My%20Webs/images/Background.jpg
+
+/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
+ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCADIAMgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6lcbs
+joaSTaye3FGMEc0D7rA9jQAOvmHDdKVv3koz0AyajUkxR46tUqJye+RigBsTZYv2JpOThzwoyB70
+sAC2oLetE7AK0jHgLgUAHI+XdwRxQRuk2Buq80r4wPoKIwizDjkrQArthmUf3eKaEC/vR1PGPalY
+/Og7k0oG4tztVf1oAGUIrjPLc0W64Xb3xk0TY2yOT24oj/1QY9XwPwoAYDshB7kk0BCJPv8AIHNI
+eVI/uvUjDahOfmagBsIwSc8Dim+WFBCnk8DPapGQKUjBz3JpkI8yQyFsIThfegAcErtXJJ4qU9Tt
+6ChThGx64qEEuSVOI1PJ9TQAshGPYuKf0wx6F80kioGUe4pZjwzdAvSgBFGBH67qbJGpyxOMUq5M
+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
+ff4z6U4ndMcf3DRRQAA87u4HNFFFAH//2Q==
+
+------=_NextPart_000_0000_01C38059.C65575C0--
